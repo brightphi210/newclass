@@ -4,18 +4,20 @@
 
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutPage from "./pages/about/AboutPage";
+import AboutPage from "./pages/dashboard/Dashboard";
 import HomePage from "./pages/home/HomePage";
+import Login from "./pages/login/Login";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 const App = () =>{
 
   return(
-
     <div classNa="">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/dashboard" element={<Dashboard />}/>
         </Routes>
       </BrowserRouter>
     </div>
