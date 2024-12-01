@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { UserContext } from '../auth/Context'
+import { useContext } from 'react'
 const Navbar = () => {
-
+  
+    
     const isAuthenticated = localStorage.getItem('token')
 
     const navigate = useNavigate()

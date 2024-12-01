@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../../components/Button'
 import Navbar from '../../components/Navbar'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Login = () => {
 
     const [email, setEmail] = useState('')
@@ -11,7 +11,8 @@ const Login = () => {
     const defualtEmail = 'joe@gmail.com'
 
     
-    const navigate = useNavigate()
+    const navigate = useNavigate() //- is used for redirecting to a new page
+
     const handleLogin = (e) =>{
         
         if(email === defualtEmail && password === defaultPassword){
@@ -22,7 +23,10 @@ const Login = () => {
         else{
             alert('Incorrect Credentials')
         }
-    }    
+    }
+
+
+    
 
   return (
     <div>
